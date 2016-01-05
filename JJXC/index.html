@@ -1,6 +1,108 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>install JJXC</title></head>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>驾驾行车</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="apple-mobile-web-app-title" content=""/>
+	<meta name="apple-touch-fullscreen" content="YES" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta http-equiv="x-rim-auto-match" content="none" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- This is to force IE into the latest version mode, overriding 'compatibility' mode which breaks everything. -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="" />
+	<link href="/Resources/base.css" rel="stylesheet" type="text/css">
+	<!--js -->
+	<script type="text/javascript" src="/Resources/jquery-1.7.2.min.js"></script>
+</head>
 <body>
-<script language="javascript">location.href='itms-services://?action=download-manifest&amp;url=https://beijingxiaohe.github.io/iOSDownSupport/JJXC/JJXC.plist'</script>
-<a href="itms-services://?action=download-manifest&amp;url=https://beijingxiaohe.github.io/iOSDownSupport/JJXC/JJXC.plist">install JJXC <</a></span></p>
+	<script type="text/javascript" src="/Resources/WeixinApi.js"></script>
+	<script type="text/javascript">
+		function getQueryString(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) return unescape(r[2]); return null;
+		}		
+		var TEA_URL = 'http://www.hudim.com', id = getQueryString('id');
+		// 所有功能必须包含在 WeixinApi.ready 中进行
+		WeixinApi.ready(function(Api){
+			// 微信分享的数据
+			var wxData = {
+				"imgUrl":TEA_URL+"/Website/Public/Shop/images/wxfx.png",
+				"link":TEA_URL+"/index.php/Shop/Register/index"+ (id ? '/id/'+id : '') +".html",
+				"desc":"驾驾行车，其乐无穷！",
+				"title":"《驾驾行车》"
+			};
+			// 分享的回调
+			var wxCallbacks = {
+				// 分享操作开始之前
+				ready:function () {
+					// 你可以在这里对分享的数据进行重组
+				},
+				// 分享被用户自动取消
+				cancel:function (resp) {
+					// 你可以在你的页面上给用户一个小Tip，为什么要取消呢？
+				},
+				// 分享失败了
+				fail:function (resp) {
+					// 分享失败了，是不是可以告诉用户：不要紧，可能是网络问题，一会儿再试试？
+				},
+				// 分享成功
+				confirm:function (resp) {
+					// 分享成功了，我们是不是可以做一些分享统计呢？
+				},
+				// 整个分享过程结束
+				all:function (resp) {
+					// 如果你做的是一个鼓励用户进行分享的产品，在这里是不是可以给用户一些反馈了？
+				}
+			};		
+			// 用户点开右上角popup菜单后，点击分享给好友，会执行下面这个代码
+			Api.shareToFriend(wxData, wxCallbacks);		 
+			// 点击分享到朋友圈，会执行下面这个代码
+			Api.shareToTimeline(wxData, wxCallbacks);			
+			//分享到微博
+			Api.shareToWeibo(wxData, wxCallbacks);
+		});
+	</script>
+	<section class="doc" role="page" type="end">
+		<div class="masking" note-type="mask"></div>
+		<div class="tishi" note-type="tishi"><img src="/Resources/msg.jpg"></div>		
+		<div class="banner"><img src="/Resources/banner.jpg"></div>
+		<div class="cont">
+			<div class="zan"></div>
+			<p class="o">立即体验</p>
+			<p>驾驾行车！</p>
+		</div>
+		<div class="foot">
+                <div class="l"><a href="https://beijingxiaohe.github.io/iOSDownSupport/JJXC/jjxc.html"></a></div>
+<!--			<div class="l"><a href="https://itunes.apple.com/cn/app/jia-jia-xing-che/id1013709589?mt=8"></a></div>-->
+			<div class="r"><a href="http://soft.irishud.com.cn/JJXC.apk"></a></div>
+		</div>
+	</section>
+	<script language="javascript" type="text/javascript">
+		$(document).ready(function(){
+			$('.doc').css('min-height',$(window).height());
+			var H = ($(window).height() - $('.banner').height() - 215)/2;
+			$('.cont').css('margin-top',H);
+			//关闭
+			$('div[note-type="mask"]').on('click',  function(){
+				$(this).fadeOut("slow");
+				$('div[note-type="tishi"]').hide();
+			});
+		});
+		$(window).resize(function(){
+			$('.doc').css('min-height',$(window).height());
+			var H = ($(window).height() - $('.banner').height() - 215)/2;
+			$('.cont').css('margin-top',H);
+		});
+	</script>
 </body>
 </html>
+		
