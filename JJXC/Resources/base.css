@@ -1,0 +1,69 @@
+html, body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strike, strong, sub, sup, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, details, figure, figcaption, hgroup, menu, nav, section, summary, time, mark, audio, video {margin: 0;padding: 0;font-size: 100%;}
+body {font: 14px/1.5 "Microsoft YaHei", Helvetica, Arial, 'Lucida Grande', sans-serif;-webkit-tap-highlight-color: rgba(255,255,0,0.4);-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;-webkit-touch-callout: none;cursor: default;-ms-content-zooming: none;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-webkit-font-smoothing: antialiased;-moz-font-smoothing: antialiased;-ms-font-smoothing: antialiased;font-smoothing: antialiased;text-rendering: optimizelegibility;color: #505050;}
+*, 
+*:after, 
+*::before {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.clearfix:before,
+.clearfix:after {display: table;content: " ";}
+.clearfix:after {clear: both;}
+.scroll-y,.scroll-x {-webkit-overflow-scrolling: touch;-moz-overflow-scrolling: touch;overflow-scrolling: touch;}
+.scroll-y {overflow-x: hidden;overflow-y: scroll;}
+.scroll-x {overflow-x: scroll;overflow-y: hidden;}
+img {display: block;width: 100%;}
+a {outline: none;color: inherit;text-decoration: none;}
+section[role="page"] {position: relative;padding-bottom: 25px;}
+section[role="page"][type="end"] {padding-bottom: 65px;}
+section[role="page"][type="both"]{padding: 28px 0 65px;}
+.bg--gray{background-color: #fafafa;}
+.btn{font-size: 16px;display: inline-block;outline: none;font-style: normal;text-align: center;text-decoration: none;white-space: nowrap;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;user-select: none;-webkit-tap-highlight-color: rgba(255,255,0,0.4);-webkit-transition: all 0.25s ease;-moz-transition: all 0.25s ease;transition: all 0.25s ease;color: rgba(255, 255, 255, 1);background-color: #f9f9f9;border-radius: 3px;padding: 6px 10px;line-height:20px;border:1px solid transparent;}
+.doc {position: relative;margin: 0 auto;width: 640px;height:100%;z-index:1;background:#fff;}
+.btn.btn--red {background-color: #ec4e43;}
+.btn.btn--red:active{background-color: #d1453b;}
+@media only screen and (max-width: 768px) {
+	.doc {width: 100%;max-width: 640px;}
+	.doc .box{width: 100%;max-width: 640px;}
+}
+input:not([type="checkbox"]):not([type="radio"]), select, textarea {
+    -moz-appearance: none;
+    width: 100%;
+}
+menu[role="toolbar"] {font-size: 18px;height: 45px;left: 0;line-height: 45px;position: fixed;text-align: center;top: 0;width: 100%;z-index: 100;}
+menu[role="toolbar"] .box {background-color: #f4f4f4;border-bottom: 1px solid #cacaca;margin: 0 auto;position: relative;width: 640px;}
+@media only screen and (max-width: 768px) {
+	menu[role="toolbar"] .box {
+		width: 100%;
+	}
+}
+menu[role="toolbar"] h1 {display: block;text-align: left;width: 100%;}
+menu[role="toolbar"] .btn {background: none ;height: 45px;padding-top: 12px;position: absolute;top: 0;}
+menu[role="toolbar"] .btn--left {left: 0;width: 45px;}
+menu[role="toolbar"] .btn--right {right: 5px;width: 45px;}
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid transparent;
+    font-size: 15px;
+    line-height: 1.4em;
+    outline: medium none;
+    padding: 6px;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+
+.masking {background:url("mask.png") repeat;height: 100%;left: 0;position: fixed;top: 0;width: 100%;z-index: 1000;}
+.tishi{left: 0;position: fixed;top: 0;z-index:2000;padding: 12px; width: 100%;}
+.tishi img{border-radius: 4px;width:100%;max-width:640px;margin:auto;}
+.cont .zan{background-image:url("zan.png");background-size:61px 70px;display: block;width: 61px;height: 70px;margin: auto;}
+.cont p{text-align:center;font-size: 15px;text-align:center;}
+.cont p.o{font-size: 17px; padding-top: 10px;}		
+.foot {position: fixed;left: 0;bottom: 20px;width: 100%;}
+.foot .l{float: left;width: 50%;}
+.foot .r{float: right;width: 50%;}
+.foot a{display: block;height: 43px;margin: auto;width: 150px;background-size:150px 43px;background-repeat:no-repeat;border-radius: 4px;box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.2);}
+.foot .l a{background-image:url("ios.jpg");}
+.foot .l a:active{background-image:url("iosactive.jpg");}
+.foot .r a{background-image:url("andiro.jpg");}		
+.foot .r a:active{background-image:url("andiroactive.jpg");}
+
