@@ -29,13 +29,13 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.wmyeah.Hearken</string>
+				<string>cn.com.irishud.JJXC</string>
 				<key>bundle-version</key>
 				<string>2.0.0</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>Hearken</string>
+				<string>驾驾行车</string>
 			</dict>
 		</dict>
 	</array>
